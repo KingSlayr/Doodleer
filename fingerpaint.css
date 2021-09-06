@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+}
+.myPhotos{
+    display: none;
+}
+
+.tools{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 2vw;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+button{
+    background-color: rgb(255, 255, 255);
+    border: 1px rgba(0, 0, 0, 0.3) solid;
+    padding: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.301);
+}
+
+#btnShow{
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    width: 5vw;
+    padding: 1vh;
+}
+
+.myPhotos>img{
+    margin: 2vh;
+    width: 20vw;
+}
