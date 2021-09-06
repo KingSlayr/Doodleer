@@ -46,14 +46,22 @@ const show = () => {
   document.querySelector(".myPhotos").appendChild(head);
   const storageRef = ref(storage, 'Images/');
   listAll(storageRef)
-    .then((res)=>res.items.forEach((itemRef) => {
-      getDownloadURL(itemRef).then((url)=>{
-        console.log(url);
-        var img = document.createElement('img');
-            img.src = url;
-            img.width = '350';
-            document.querySelector(".myPhotos").appendChild(img);
-      })
-
-    }));
+    .then((res)=>{
+      if(res.items.length==0){
+        var n = document.createElement('h2');
+        n.innerHTML = 'No Photos';
+        document.querySelector(".myPhotos").appendChild(n);   
+      }else{
+        res.items.forEach((itemRef) => {
+          getDownloadURL(itemRef).then((url)=>{
+            console.log(url);
+            var img = document.createElement('img');
+                img.src = url;
+                img.width = '350';
+                document.querySelector(".myPhotos").appendChild(img);
+          })
+    
+        })
+      }
+    });
 }
