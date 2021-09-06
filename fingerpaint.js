@@ -61,7 +61,7 @@ window.onload=function()
     //Size Canvas
     context = document.getElementById('myCanvas').getContext("2d");
     context.canvas.width = window.innerWidth;
-    context.canvas.height = window.innerHeight-100;
+    context.canvas.height = window.innerHeight-150;
     
     //Mouse movement
     document.getElementById('myCanvas').onmousemove = handleMouseMove;

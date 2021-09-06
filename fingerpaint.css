@@ -22,12 +22,11 @@ body {
   border: 1px solid black;
   /* height: 20vh; */
   /* overflow: scroll; */
-  /* height: 20vh; */
+  height: 18vh;
 }
 
-
-.tools>div{
-    padding: 1vh 0;
+.tools > div {
+  padding: 1vh 0;
 }
 
 button {
@@ -53,4 +52,9 @@ button:hover {
 .myPhotos > img {
   margin: 2vh;
   width: 20vw;
+}
+
+#myCanvas{
+    width: 100vw;
+    height: 80vh;
 }
