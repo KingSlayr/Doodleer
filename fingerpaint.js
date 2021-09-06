@@ -67,6 +67,10 @@ window.onload=function()
     document.getElementById('myCanvas').onmousemove = handleMouseMove;
     document.getElementById('myCanvas').onmousedown = handleDown;
     document.getElementById('myCanvas').onmouseup = handleUp;
+
+    document.getElementById('myCanvas').ontouchmove = handleMouseMove;
+    document.getElementById('myCanvas').ontouchstart = handleDown;
+    document.getElementById('myCanvas').ontouchend = handleUp;
     
     //Style line
     context.strokeStyle = "#000";
@@ -79,28 +83,47 @@ window.onload=function()
 
 function handleMouseMove(e)
 {
-    // console.log(e.clientX);
-    // console.log(e.clientY);
-    if(drawing)
-    {
-       
-        context.lineTo(e.clientX, e.clientY);
-        context.closePath();
-        context.stroke();
-        context.moveTo(e.clientX, e.clientY);
-    } else
-    {
-        context.moveTo(e.clientX, e.clientY);
+    if(e.type=='touchmove'){
+        if(drawing)
+        {
+           
+            context.lineTo(e.targetTouches[0].clientX,e.targetTouches[0].clientY);
+            context.closePath();
+            context.stroke();
+            context.moveTo(e.targetTouches[0].clientX,e.targetTouches[0].clientY);
+        } else
+        {
+            context.moveTo(e.targetTouches[0].clientX,e.targetTouches[0].clientY);
+        }
+    }else{
+        if(drawing)
+        {
+           
+            context.lineTo(e.clientX, e.clientY);
+            context.closePath();
+            context.stroke();
+            context.moveTo(e.clientX, e.clientY);
+        } else
+        {
+            context.moveTo(e.clientX, e.clientY);
+        }
     }
     
 }
 
 function handleDown(e)
 {
-    drawing = !drawing; 
-    console.log('handleDown',drawing);
-    context.moveTo(e.clientX, e.clientY);
-    context.beginPath();
+    if(e.type=='touchdown'){
+        drawing = !drawing; 
+        console.log('handleDown',drawing);
+        context.moveTo(e.targetTouches[0].clientX,e.targetTouches[0].clientY);
+        context.beginPath();
+    }else{
+        drawing = !drawing; 
+        console.log('handleDown',drawing);
+        context.moveTo(e.clientX, e.clientY);
+        context.beginPath();
+    }
      
 }
 
