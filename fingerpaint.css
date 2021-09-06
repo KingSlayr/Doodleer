@@ -1,43 +1,55 @@
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    margin: 0;
-}
-.myPhotos{
-    display: none;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  /* overflow: hidden; */
 }
 
-.tools{
-    display: flex;
-    justify-content: space-between;
-    padding: 1vh 2vw;
-    flex-wrap: wrap;
-    border: 1px solid black;
+.myPhotos {
+  display: none;
 }
 
-button{
-    background-color: rgb(255, 255, 255);
-    border: 1px rgba(0, 0, 0, 0.3) solid;
-    padding: 5px;
-    margin: 0 5px;
-    cursor: pointer;
+.tools {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 2vw;
+  flex-wrap: wrap;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 1px solid black;
+  /* height: 20vh; */
+  /* overflow: scroll; */
+  /* height: 20vh; */
 }
 
-button:hover{
-    background-color: rgba(0, 0, 0, 0.301);
+.tools>div{
+    padding: 1vh 0;
 }
 
-#btnShow{
-    position: absolute;
-    top: 5vh;
-    right: 5vh;
-    width: 5vw;
-    padding: 1vh;
+button {
+  background-color: rgb(255, 255, 255);
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
 }
 
-.myPhotos>img{
-    margin: 2vh;
-    width: 20vw;
+button:hover {
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+#btnShow {
+  position: absolute;
+  top: 5vh;
+  right: 5vh;
+  width: 10vh;
+  padding: 1vh;
+}
+
+.myPhotos > img {
+  margin: 2vh;
+  width: 20vw;
 }
