@@ -62,6 +62,8 @@ window.onload=function()
     context = document.getElementById('myCanvas').getContext("2d");
     context.canvas.width = window.innerWidth;
     context.canvas.height = window.innerHeight-150;
+    document.getElementById('myCanvas').getContext('2d').fillStyle = "#fff";
+    document.getElementById('myCanvas').getContext('2d').fillRect(0, 0, context.canvas.width, context.canvas.height);
     
     //Mouse movement
     document.getElementById('myCanvas').onmousemove = handleMouseMove;

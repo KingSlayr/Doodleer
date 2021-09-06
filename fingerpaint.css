@@ -57,4 +57,5 @@ button:hover {
 #myCanvas{
     width: 100vw;
     height: 80vh;
+    background-color: #fff;
 }
