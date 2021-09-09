@@ -50,10 +50,11 @@ button:hover {
 }
 
 .myPhotos > img {
-  margin: 2vh;
-  width: 100%;
-  height:auto;
-  border:5px solid black;
+    width: 80vw;
+    border: 0.5vw solid;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin:2vh
 }
 
 #myCanvas{
