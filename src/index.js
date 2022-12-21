@@ -34,7 +34,7 @@ document.getElementById('btnShow').addEventListener('click', function(){
     photo=true;
     document.getElementById('btnShow').innerHTML='Show Canvas'
     document.querySelector("#myCanvas").style.display='none'
-    document.querySelector(".myPhotos").style.display='block'
+    document.querySelector(".myPhotos").style.display='flex'
     document.querySelector(".tools").style.display='none'
     show();
   }

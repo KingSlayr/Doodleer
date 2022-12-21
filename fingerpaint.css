@@ -8,6 +8,8 @@ body {
 
 .myPhotos {
   display: none;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tools {
@@ -43,18 +45,18 @@ button:hover {
 
 #btnShow {
   position: absolute;
-  top: 5vh;
-  right: 5vh;
+  top: 5px;
+  right: 5px;
   width: 10vh;
   padding: 1vh;
 }
 
 .myPhotos > img {
-    width: 80vw;
-    border: 0.5vw solid;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin:2vh
+  max-width: 80%;
+  border: 2px solid;
+  margin: 1vh;
+  padding: 2px;
+  max-height: 50vh;
 }
 
 #myCanvas{
