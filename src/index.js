@@ -17,8 +17,10 @@ const storage = getStorage();
 const storageRef = ref(storage, 'Images/'+new Date());
 
 document.getElementById('btnSave').addEventListener('click', function(){
+  document.getElementById('loader').style.display='flex'
   uploadString(storageRef, document.getElementById('myCanvas').toDataURL(), 'data_url').then((snapshot) => {
     alert('Image Uploaded!!')
+    document.getElementById('loader').style.display='none'
   });
 }, false);
 
